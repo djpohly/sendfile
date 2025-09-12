@@ -1,0 +1,1 @@
+Simple implementation of file copy using sendfile().  This utility was able to flash archlinux-2025.09.01-x86_64.iso (1.5G) fully to a cheap 8G USB2.0 flash drive in 2m15s (including the sync command afterward) when cp and cat and pv all took at least 5m15s.
