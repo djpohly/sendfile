@@ -29,6 +29,7 @@ pub fn main() !void {
     const no_buffer = [0]u8{};
     var source = srcfile.reader(&no_buffer);
     // Using dstfile.writer() results in error.Unimplemented (in 0.15.1)
+    // (https://github.com/ziglang/zig/issues/25142?)
     var sink = dstfile.writerStreaming(&no_buffer);
     const ret = try std.fs.File.Writer.sendFile(
         &sink.interface,
